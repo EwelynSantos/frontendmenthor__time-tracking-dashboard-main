@@ -1,0 +1,267 @@
+    :root {
+        /* ### Primary */
+
+        --Blue: hsl(246, 80%, 60%);
+        --Ligh-red: hsl(15, 100%, 70%);
+        --Soft-blue: hsl(195, 74%, 62%);
+        --Light-red: hsl(348, 100%, 68%);
+        --Lime-green: hsl(145, 58%, 55%);
+        --Violet: hsl(264, 64%, 52%);
+        --Soft-orange: hsl(43, 84%, 65%);
+
+        /* ### Neutral */
+
+        --Very-dark-blue: hsl(226, 43%, 10%);
+        --Dark-blue: hsl(235, 46%, 20%);
+        --Desaturated-blue: hsl(235, 45%, 61%);
+        --Pale-Blue: hsl(236, 100%, 87%);
+    }
+
+    * {
+        font-family: 'Rubik', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+    }
+
+    body {
+        background-color: var(--Very-dark-blue);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .principal {
+        display: grid;
+        grid-template-areas: "jeremy work play study"
+            "jeremy exercise social self-care";
+        width: 80%;
+        gap: 18px 30px;
+        margin-top: 100px;
+
+
+    }
+
+    .jeremy {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        grid-area: jeremy;
+        background-color: var(--Dark-blue);
+        width: 250px;
+        color: white;
+        border-radius: 10px;
+
+    }
+
+    .usuario {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        background-color: var(--Blue);
+        padding: 35px 30px 50px 30px;
+        border-radius: 10px;
+        height: 330px;
+
+    }
+
+    .usuario h1 {
+        font-size: 35px;
+        font-weight: 400;
+    }
+
+    .usuario p {
+        color: var(--Pale-Blue);
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .usuario-image {
+        width: 40%;
+        border: 3px solid white;
+        border-radius: 50%;
+    }
+
+    .jeremy ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 30px;
+        color: var(--Pale-Blue);
+    }
+
+    .jeremy li:hover {
+        color: white;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .lista {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: var(--Pale-Blue);
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .card {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        background-color: var(--Dark-blue);
+        padding: 30px;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        width: 100%;
+    }
+
+    .hora {
+        color: white;
+        font-size: 50px;
+        font-weight: 300;
+    }
+
+    .icones {
+        width: 25%;
+        position: relative;
+        right: 20px;
+    }
+
+    h2 {
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+
+    .work,
+    .play,
+    .study,
+    .exercise,
+    .social,
+    .self-care {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        border-radius: 12px;
+        width: 15rem;
+        position: relative;
+        height: 235px;
+    }
+
+    .work {
+        grid-area: work;
+        background-color: var(--Ligh-red);
+    }
+
+    .play {
+        grid-area: play;
+        background-color: var(--Soft-blue);
+    }
+
+    .study {
+        grid-area: study;
+        background-color: var(--Light-red);
+    }
+
+    .exercise {
+        grid-area: exercise;
+        background-color: var(--Lime-green);
+    }
+
+    .social {
+        grid-area: social;
+        background-color: var(--Violet);
+    }
+
+    .self-care {
+        grid-area: self-care;
+        background-color: var(--Soft-orange);
+    }
+
+    .card:hover {
+        background-color: var(--Desaturated-blue);
+        transition: 0.4s;
+        cursor: pointer;
+    }
+
+    .attribution {
+        font-size: 15px;
+        font-weight: 300;
+        color: var(--Pale-Blue);
+    }
+
+    @media(max-width:1279px) {
+        .principal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .jeremy ul{
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px 15px;
+        }
+
+        .usuario{
+            flex-direction: row;
+            padding: 20px 15px;
+            align-items: center;
+            height: unset;
+        }
+        .usuario-image{
+            width: 30%;
+        }
+        .usuario h1{
+            font-size: 20px;
+        }
+        .lista{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .hora{
+            font-size: 32px;
+        }
+
+        .card{
+            gap: 10px;
+        }
+
+        .work,
+        .play,
+        .study,
+        .exercise,
+        .social,
+        .self-care{
+            height: 170px;
+        }
+    }
+
+    @media(max-width:425px) {
+
+        .work,
+        .play,
+        .study,
+        .exercise,
+        .social,
+        .self-care,
+        .jeremy,
+        .card {
+            width: 100%;
+        }
+
+    }
